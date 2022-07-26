@@ -1,0 +1,25 @@
+@import 'mixings';
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: hsl(25, 97%, 53%);
+    --paragraph: hsl(217, 12%, 63%);
+    --some: hsl(216, 12%, 54%);
+    --gradient-card-1: hsl(213, 19%, 18%);
+    --gradient-card-2: hsl(215, 27%, 12%);
+
+}
+
+.page {
+    @include flex-center;
+    width: auto;
+    height: 100vh;
+    font-family: 'Overpass', serif;
+    font-weight: 700;
+    background-color: #000;
+}

@@ -1,0 +1,28 @@
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin circle-item {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+}
+
+@mixin link-event {
+    transition: all 2s ease;
+    cursor: pointer;
+}
+
+@mixin title-definitions {
+    padding: 0 0 10px;
+    color: #fff;
+}
+
+@mixin paragraph-definitions {
+    line-height: 25px;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--paragraph);
+}

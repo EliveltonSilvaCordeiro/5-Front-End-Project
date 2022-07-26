@@ -1,0 +1,17 @@
+@media screen and (max-width: 400px) {
+    .card__section {
+        padding: 20px;
+        width: 330px;
+        height: 380px;
+        border-radius: 15px;
+    }
+}
+
+@media screen and (min-width: 401px) {
+    .card__section {
+        padding: 30px;
+        width: 365px;
+        height: 400px;
+        border-radius: 30px;
+    }
+}
