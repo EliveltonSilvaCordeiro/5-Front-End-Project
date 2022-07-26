@@ -1,0 +1,201 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: hsl(25, 97%, 53%);
+  --paragraph: hsl(217, 12%, 63%);
+  --some: hsl(216, 12%, 54%);
+  --gradient-card-1: hsl(213, 19%, 18%);
+  --gradient-card-2: hsl(215, 27%, 12%);
+}
+
+.page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: 100vh;
+  font-family: "Overpass", serif;
+  font-weight: 700;
+  background-color: #000;
+}
+
+@-webkit-keyframes opening {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes opening {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@media screen and (max-width: 400px) {
+  .card__section {
+    padding: 20px;
+    width: 330px;
+    height: 380px;
+    border-radius: 15px;
+  }
+}
+@media screen and (min-width: 401px) {
+  .card__section {
+    padding: 30px;
+    width: 365px;
+    height: 400px;
+    border-radius: 30px;
+  }
+}
+.card__section {
+  display: grid;
+  gap: 20px;
+  -webkit-animation: opening 2s forwards;
+          animation: opening 2s forwards;
+  background: linear-gradient(var(--some) -900%, hsl(224deg, 27%, 8%));
+}
+
+.icon__star {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  padding: 15px;
+  background-color: var(--gradient-card-1);
+  color: var(--primary-color);
+  background-image: url(../img/icon-star.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 18px;
+}
+
+.section__text .text__title {
+  padding: 0 0 10px;
+  color: #fff;
+}
+.section__text .text__paragraph {
+  line-height: 25px;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--paragraph);
+}
+
+.section__rating {
+  display: flex;
+  justify-content: space-between;
+}
+.section__rating .rating__itens {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: var(--gradient-card-1);
+  color: var(--paragraph);
+}
+.section__rating .rating__itens:hover {
+  transition: all 2s ease;
+  background-color: var(--primary-color);
+  color: #fff;
+}
+.section__rating .rating__itens:active {
+  transition: background-color 0.5s ease;
+  background-color: var(--paragraph);
+}
+.section__rating .rating__item__selected {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  transition: all 2s ease;
+  background-color: var(--paragraph);
+  color: #fff;
+}
+.section__rating .rating__item__selected:active {
+  transition: none;
+  opacity: 0.5;
+}
+
+.section__submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  background-color: var(--primary-color);
+}
+.section__submit:hover {
+  transition: all 2s ease;
+  cursor: pointer;
+  background-color: #fff;
+}
+.section__submit .submit__button {
+  padding: 10px;
+  letter-spacing: 2px;
+  font-weight: 400;
+  color: #fff;
+}
+.section__submit:hover > .submit__button {
+  transition: all 2s ease;
+  cursor: pointer;
+  color: var(--primary-color);
+}
+
+.section__store-user-choice {
+  display: none;
+}
+
+/*html content in js*/
+.section__image {
+  padding: 20px 0 0;
+  display: flex;
+  justify-content: center;
+}
+
+.section__user-rating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section__user-rating .user-rating__phrase {
+  padding: 10px;
+  width: 180px;
+  border-radius: 30px;
+  text-align: center;
+  font-weight: 400;
+  font-size: 14px;
+  background-color: hsla(213deg, 20%, 18%, 0.6);
+  color: var(--primary-color);
+}
+
+.section__text2 {
+  text-align: center;
+}
+.section__text2 .text__title {
+  padding: 0 0 10px;
+  color: #fff;
+}
+.section__text2 .text__paragraph {
+  line-height: 25px;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--paragraph);
+}/*# sourceMappingURL=main.css.map */
