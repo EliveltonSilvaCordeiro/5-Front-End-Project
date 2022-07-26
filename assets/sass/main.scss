@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+@import 'configurations';
+@import 'animations';
+@import 'mixings';
+@import 'media';
+
+.card__section {
+    display: grid;
+    gap: 20px;
+    animation: opening 2s forwards;
+    background: linear-gradient(var(--some) -900%, hsl(224, 27%, 8%));
+}
+
+.icon__star {
+    @include flex-center;
+    @include circle-item;
+
+    padding: 15px;
+    background-color: var(--gradient-card-1);
+    color: var(--primary-color);
+
+    background-image: url(../img/icon-star.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 18px;
+}
+
+.section__text {
+
+    .text__title {
+        @include title-definitions
+    }
+
+    .text__paragraph {
+        @include paragraph-definitions;
+    }
+}
+
+.section__rating {
+    display: flex;
+    justify-content: space-between;
+
+    .rating__itens {
+        @include flex-center;
+        @include circle-item;
+
+        background-color: var(--gradient-card-1);
+        color: var(--paragraph);
+
+        &:hover {
+            transition: all 2s ease;
+            background-color: var(--primary-color);
+            color: #fff;
+        }
+
+        &:active {
+            transition: background-color .5s ease;
+            background-color: var(--paragraph);
+        }
+    }
+
+    .rating__item__selected {
+        @include flex-center;
+        @include circle-item;
+
+        transition: all 2s ease;
+        background-color: var(--paragraph);
+        color: #fff;
+
+        &:active {
+            transition: none;
+            opacity: 0.5;
+        }
+    }
+}
+
+.section__submit {
+    @include flex-center;
+
+    border-radius: 30px;
+    background-color: var(--primary-color);
+
+    &:hover {
+        @include link-event;
+
+        background-color: #fff;
+    }
+
+    .submit__button {
+        padding: 10px;
+        letter-spacing: 2px;
+        font-weight: 400;
+        color: #fff;
+    }
+
+    &:hover > .submit__button {
+        @include link-event;
+
+        color: var(--primary-color);
+    }
+}
+
+.section__store-user-choice {
+    display: none;
+}
+
+/*html content in js*/
+
+.section__image {
+    padding: 20px 0 0;
+    display: flex;
+    justify-content: center;
+}
+
+.section__user-rating {
+    @include flex-center;
+
+    .user-rating__phrase {
+        padding: 10px;
+        width: 180px;
+        border-radius: 30px;
+        text-align: center;
+        font-weight: 400;
+        font-size: 14px;
+        background-color: hsla(213, 20%, 18%, 0.6);
+        color: var(--primary-color);
+    }
+}
+
+.section__text2 {
+    text-align: center;
+
+    .text__title {
+        @include title-definitions;
+    }
+
+    .text__paragraph {
+        @include paragraph-definitions;
+    }
+}
