@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/favicon-32x32.png">
+        <link rel="stylesheet" href="./assets/css/main.css" media="all">
+        <title>Frontend Mentor | Interactive rating component</title>
+    </head>
+    <body class="page">
+        <div class="main-wrapper">
+            <main class="card__section">
+                <div class="section__icon">
+                    <div class="icon__star"></div>
+                </div>
+                <div class="section__text">
+                    <h2 class="text__title">How did we do?</h2>
+                    <p class="text__paragraph">
+                        Please let us know how we did with your support request. All feedback is appreciated
+                        to help us improve our offering!
+                    </p>
+                </div>
+                <div class="section__rating">
+                    <span onclick="ratingValue_1()" class="rating__itens n1">1</span>
+                    <span onclick="ratingValue_2()" class="rating__itens n2">2</span>
+                    <span onclick="ratingValue_3()" class="rating__itens n3">3</span>
+                    <span onclick="ratingValue_4()" class="rating__itens n4">4</span>
+                    <span onclick="ratingValue_5()" class="rating__itens n5">5</span>
+                </div>
+                <div class="section__store-user-choice">
+                    <span id="userRating">0</span>
+                </div>
+                <div onclick="submitChoice()" class="section__submit">
+                    <span class="submit__button">SUBMIT</span>
+                </div>
+            </main>
+        </div>
+        <script async src="./assets/js/main.js"></script>
+    </body>
+</html>
